@@ -17,7 +17,8 @@ final class TodayViewController: UIViewController {
         collectionView.dataSource = self
         
         collectionView.backgroundColor = .systemBackground
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "todayCell")
+        // 레지스터에 사용할 셀 등록
+        collectionView.register(TodayCollectionViewCell.self, forCellWithReuseIdentifier: "todayCell")
         
         return collectionView
     }()
@@ -37,6 +38,7 @@ final class TodayViewController: UIViewController {
 }
 
 
+// MARK: - collectionView의 데이터 설정을 위한 datasource확장 추가
 extension TodayViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -44,16 +46,19 @@ extension TodayViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "todayCell", for: indexPath)
-        cell.backgroundColor = .black
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "todayCell", for: indexPath) as? TodayCollectionViewCell
+        cell?.setup()
         
-        return cell
+        return cell ?? UICollectionViewCell() // 혹시라도 닐이면 그냥 초기화한 cell을 보여준다.
     }
     
 }
 
+// MARK: - layout설정을 위한 delegate 확장 추가
 extension TodayViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 30.0, height: 40.0)
+        let width = collectionView.frame.width - 32.0
+        
+        return CGSize(width: width, height: width)
     }
 }
