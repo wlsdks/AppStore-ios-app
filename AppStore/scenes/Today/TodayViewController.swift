@@ -27,7 +27,12 @@ final class TodayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .blue
+        // 컬렉션뷰를 뷰 컨트롤러에 추가
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints {
+            // 모서리를 전부 슈퍼뷰에 맞춰줌
+            $0.edges.equalToSuperview()
+        }
     }
 }
 
