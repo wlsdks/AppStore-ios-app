@@ -44,9 +44,12 @@ final class TodayCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    
     func setup() {
         setupSubViews()
+        
+        subTitleLabel.text = "서브타이틀"
+        descriptionLabel.text = "설명설명"
+        titleLabel.text = "앱의 이름"
     }
 }
 
