@@ -10,7 +10,8 @@ import UIKit
 class TabBarController: UITabBarController {
     
     private lazy var todayViewController: UIViewController = {
-        let viewController = UIViewController()
+        // viewController를 내가 만든 TodayViewController로 설정해 준다.
+        let viewController = TodayViewController()
         // 첫번째 탭이라 tag:0이다.
         let tabBarItem = UITabBarItem(title: "투데이", image: UIImage(systemName: "mail"), tag: 0)
         viewController.tabBarItem = tabBarItem
