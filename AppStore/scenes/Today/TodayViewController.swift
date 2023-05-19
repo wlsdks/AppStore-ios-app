@@ -18,7 +18,14 @@ final class TodayViewController: UIViewController {
         
         collectionView.backgroundColor = .systemBackground
         // 레지스터에 사용할 셀 등록
-        collectionView.register(TodayCollectionViewCell.self, forCellWithReuseIdentifier: "todayCell")
+        collectionView.register(TodayCollectionViewCell.self,
+                                forCellWithReuseIdentifier: "todayCell"
+                                )
+        
+        collectionView.register(TodayCollectionHeaderView.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: "TodayCollectionHeaderView"
+                                )
         
         return collectionView
     }()
@@ -60,5 +67,19 @@ extension TodayViewController: UICollectionViewDelegateFlowLayout {
         let width = collectionView.frame.width - 32.0
         
         return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard kind == UICollectionView.elementKindSectionHeader,
+              let header = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: "TodayCollectionHeaderView",
+                for: indexPath
+              ) as? TodayCollectionHeaderView
+        else { return UICollectionReusableView() }
+        
+        header.setupViews()
+        
+        return header
     }
 }
