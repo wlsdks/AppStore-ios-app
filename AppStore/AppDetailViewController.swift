@@ -61,6 +61,8 @@ final class AppDetailViewController: UIViewController {
         let button = UIButton()
         button.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
         button.tintColor = .systemBlue
+        // 터치하면 동작하도록 구현
+        button.addTarget(self, action: #selector(didTapShareButton), for: .touchUpInside)
         
         return button
     }()
@@ -133,8 +135,14 @@ private extension AppDetailViewController {
             $0.trailing.equalTo(titleLabel.snp.trailing)
             $0.width.equalTo(32.0)
         }
+    }
+    
+    // 공유하기 버튼 클릭시 동작하는 기능 메서드
+    @objc func didTapShareButton() {
+        let activityItems: [Any] = [today.title]
+        let activityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
         
-        
+        present(activityViewController, animated: true)
     }
     
 }
