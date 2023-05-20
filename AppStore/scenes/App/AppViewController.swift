@@ -10,4 +10,20 @@ import UIKit
 
 final class AppViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupNavigationController()
+    }
+    
+}
+
+
+// 매소드는 따로 분리해서 작성
+private extension AppViewController {
+    func setupNavigationController() {
+        navigationItem.title = "앱"
+        navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
 }

@@ -26,7 +26,8 @@ class TabBarController: UITabBarController {
     
     // MARK: - [앱] 이라는 탭을 하단에 보이도록 선언
     private lazy var appViewController: UIViewController = {
-        let viewController = AppViewController()
+        // Navigation을 상단에 추가하기 위해 UINavigationController()를 사용한다.
+        let viewController = UINavigationController(rootViewController: AppViewController())
         
         let tabBarItem = UITabBarItem(title: "앱", image: UIImage(systemName: "square.stack.3d.up"), tag: 1)
         viewController.tabBarItem = tabBarItem
