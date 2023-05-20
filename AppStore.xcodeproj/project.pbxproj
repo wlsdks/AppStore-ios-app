@@ -21,6 +21,7 @@
 		EC973BCF2A18837800EB4BFF /* FeatureSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC973BCE2A18837800EB4BFF /* FeatureSectionView.swift */; };
 		EC973BD12A188A6400EB4BFF /* FeatureSectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC973BD02A188A6400EB4BFF /* FeatureSectionCollectionViewCell.swift */; };
 		EC973BD32A188DD900EB4BFF /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC973BD22A188DD900EB4BFF /* SeparatorView.swift */; };
+		EC973BD52A18902900EB4BFF /* RankingFeatureSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC973BD42A18902900EB4BFF /* RankingFeatureSectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		EC973BCE2A18837800EB4BFF /* FeatureSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSectionView.swift; sourceTree = "<group>"; };
 		EC973BD02A188A6400EB4BFF /* FeatureSectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		EC973BD22A188DD900EB4BFF /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
+		EC973BD42A18902900EB4BFF /* RankingFeatureSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingFeatureSectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				EC973BCE2A18837800EB4BFF /* FeatureSectionView.swift */,
 				EC973BD02A188A6400EB4BFF /* FeatureSectionCollectionViewCell.swift */,
 				EC973BD22A188DD900EB4BFF /* SeparatorView.swift */,
+				EC973BD42A18902900EB4BFF /* RankingFeatureSectionView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				EC67FA502A165B5A006BDB6E /* SceneDelegate.swift in Sources */,
 				EC973BC82A17D31000EB4BFF /* TodayCollectionViewCell.swift in Sources */,
 				EC973BCF2A18837800EB4BFF /* FeatureSectionView.swift in Sources */,
+				EC973BD52A18902900EB4BFF /* RankingFeatureSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
