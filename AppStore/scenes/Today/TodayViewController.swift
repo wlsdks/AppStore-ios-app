@@ -112,7 +112,8 @@ extension TodayViewController: UICollectionViewDelegateFlowLayout {
     
     // MARK: - 컬렉션 뷰에서 보여줄 셀(item)이 선택되었을때 동작
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = AppDetailViewController()
+        let today = todayList[indexPath.item] // 선택한 아이템의 todayList의 데이터를 담아준다.
+        let vc = AppDetailViewController(today: today)
         present(vc, animated: true)
     }
 }

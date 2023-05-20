@@ -13,6 +13,8 @@ import UIKit
  */
 final class AppDetailViewController: UIViewController {
     
+    private let today: Today
+    
     // 앱 이미지 뷰
     private let appIconImageView: UIImageView = {
         let imageView = UIImageView()
@@ -63,6 +65,17 @@ final class AppDetailViewController: UIViewController {
         return button
     }()
     
+    // 상세보기에서 plist의 today데이터를 보여줘야하니 생성자로 받아오도록 한다.
+    init(today: Today) {
+        self.today = today
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,8 +85,8 @@ final class AppDetailViewController: UIViewController {
         setupViews()
         
         appIconImageView.backgroundColor = .lightGray
-        titleLabel.text = "title"
-        subTitleLabel.text = "Sub title"
+        titleLabel.text = today.title
+        subTitleLabel.text = today.subTitle
     }
 }
 

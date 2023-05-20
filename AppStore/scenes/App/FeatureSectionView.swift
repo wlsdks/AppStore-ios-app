@@ -10,6 +10,9 @@ import UIKit
 
 final class FeatureSectionView: UIView {
     
+    // feature데이터를 받을 배열 선언
+    private var featureList: [Feature] = []
+    
     // MARK: - collectionView를 선언한다. 이건 앱 맨 상단에 있는 section에 사용되는 View다.
     private lazy var collectionView: UICollectionView = {
        let layout = UICollectionViewFlowLayout()
@@ -40,7 +43,12 @@ final class FeatureSectionView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        // 뷰 세팅 실시
         setupViews()
+        
+        // 데이터를 가져온다.
+        fetchData()
+        collectionView.reloadData() // 리로드를 한번 해준다.
     }
     
     required init?(coder: NSCoder) {
@@ -52,13 +60,16 @@ extension FeatureSectionView: UICollectionViewDataSource {
     
     // 셀의 갯수를 설정
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        featureList.count
     }
     
     // 셀의 상세설정
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureSectionCollectionViewCell", for: indexPath) as? FeatureSectionCollectionViewCell
-        cell?.setup()
+        
+        // feature세팅하고 넣어준다.
+        let feature = featureList[indexPath.item]
+        cell?.setup(feature: feature)
         
         return cell ?? UICollectionViewCell()
     }
@@ -120,4 +131,19 @@ private extension FeatureSectionView {
         
         
     }
+    
+    // MARK: - Feature데이터를 plist에서 받아와서 사용할 메서드
+    func fetchData() {
+        guard let url = Bundle.main.url(forResource: "Feature", withExtension: "plist") else { return }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let result = try PropertyListDecoder().decode([Feature].self, from: data)
+            featureList = result
+        } catch {
+            
+        }
+    }
+    
+    
 }
