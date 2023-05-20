@@ -24,11 +24,10 @@ final class AppViewController: UIViewController {
         
         // 새로운 경험, 앱의 랭킹, 코드 교환 -> 총 3개의 section이 필요하니 View를 3개 선언해 준다.
         let featureSectionView = FeatureSectionView(frame: .zero) //내가 만든 클래스인 FeatureSectionView()로 선언을 바꿔준다. 기본은 UIView()
-        let rankingFeatureSectionView = RankingFeatureSectionView()
+        let rankingFeatureSectionView = RankingFeatureSectionView(frame: .zero)
         let exchangeCodeButtonView = UIView()
         
-        rankingFeatureSectionView.backgroundColor = .blue
-        exchangeCodeButtonView.backgroundColor = .yellow
+        exchangeCodeButtonView.backgroundColor = .red
         
         // stackView에 이 3개의 섹션 뷰를 올려준다.
         [ featureSectionView, rankingFeatureSectionView, exchangeCodeButtonView ].forEach {

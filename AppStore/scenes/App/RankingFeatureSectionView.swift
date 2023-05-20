@@ -8,6 +8,9 @@
 import SnapKit
 import UIKit
 
+/**
+ 랭킹섹션 코드 추가
+ */
 final class RankingFeatureSectionView: UIView {
     
     private let cellHeight: CGFloat = 30.0
@@ -48,7 +51,19 @@ final class RankingFeatureSectionView: UIView {
         return collectionView
     }()
     
+    // separatorView선언
+    private let separatorView = SeparatorView(frame: .zero)
     
+    // 꼭 init메서드로 setupViews()를 실행시켜줘야 한다.
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setupViews()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 extension RankingFeatureSectionView: UICollectionViewDelegateFlowLayout {
@@ -72,4 +87,42 @@ extension RankingFeatureSectionView: UICollectionViewDataSource {
     
 }
 
-
+// MARK: - 랭킹 섹션을 설정하는 확장 선언
+private extension RankingFeatureSectionView {
+    
+    func setupViews() {
+        [
+            titleLabel,
+            showAllAppsButton,
+            collectionView,
+            separatorView
+        ].forEach { addSubview($0) }
+        
+        titleLabel.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(16.0)
+            $0.top.equalToSuperview().inset(16.0)
+            $0.trailing.equalTo(showAllAppsButton.snp.leading).offset(8.0)
+        }
+        
+        showAllAppsButton.snp.makeConstraints {
+            $0.trailing.equalToSuperview().inset(16.0)
+            $0.bottom.equalTo(titleLabel.snp.bottom)
+        }
+        
+        collectionView.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(16.0)
+            $0.height.equalTo(cellHeight * 3) // 조금 더 많은 앱을 보여주고싶다면 여기서 *4 이런식으로 수정하면 된다.
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
+        }
+        
+        separatorView.snp.makeConstraints {
+            $0.top.equalTo(collectionView.snp.bottom).offset(16.0)
+            $0.bottom.equalToSuperview()
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
+        }
+        
+    }
+    
+}
