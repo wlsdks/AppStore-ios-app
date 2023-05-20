@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC5BBE872A1899C3002810C6 /* ExchangeCodeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5BBE862A1899C3002810C6 /* ExchangeCodeButtonView.swift */; };
 		EC67FA4E2A165B5A006BDB6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC67FA4D2A165B5A006BDB6E /* AppDelegate.swift */; };
 		EC67FA502A165B5A006BDB6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC67FA4F2A165B5A006BDB6E /* SceneDelegate.swift */; };
 		EC67FA522A165B5A006BDB6E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC67FA512A165B5A006BDB6E /* TabBarController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC5BBE862A1899C3002810C6 /* ExchangeCodeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCodeButtonView.swift; sourceTree = "<group>"; };
 		EC67FA4A2A165B5A006BDB6E /* AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC67FA4D2A165B5A006BDB6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC67FA4F2A165B5A006BDB6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				EC973BD22A188DD900EB4BFF /* SeparatorView.swift */,
 				EC973BD42A18902900EB4BFF /* RankingFeatureSectionView.swift */,
 				EC973BD62A18948200EB4BFF /* RankingFeatureSectionViewCell.swift */,
+				EC5BBE862A1899C3002810C6 /* ExchangeCodeButtonView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			files = (
 				EC973BC62A17CF8900EB4BFF /* TodayViewController.swift in Sources */,
 				EC67FA522A165B5A006BDB6E /* TabBarController.swift in Sources */,
+				EC5BBE872A1899C3002810C6 /* ExchangeCodeButtonView.swift in Sources */,
 				EC973BD32A188DD900EB4BFF /* SeparatorView.swift in Sources */,
 				EC67FA4E2A165B5A006BDB6E /* AppDelegate.swift in Sources */,
 				EC973BD72A18948200EB4BFF /* RankingFeatureSectionViewCell.swift in Sources */,
