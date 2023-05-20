@@ -13,8 +13,6 @@ import UIKit
  */
 final class RankingFeatureSectionView: UIView {
     
-    private let cellHeight: CGFloat = 30.0
-    
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 18.0, weight: .black)
@@ -46,7 +44,7 @@ final class RankingFeatureSectionView: UIView {
         collectionView.backgroundColor = .systemBackground
         collectionView.showsHorizontalScrollIndicator = false
         
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "RankingFeatureCollectionViewCell")
+        collectionView.register(RankingFeatureSectionViewCell.self, forCellWithReuseIdentifier: "RankingFeatureCollectionViewCell")
         
         return collectionView
     }()
@@ -68,7 +66,7 @@ final class RankingFeatureSectionView: UIView {
 
 extension RankingFeatureSectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: collectionView.frame.width - 32.0, height: cellHeight)
+        CGSize(width: collectionView.frame.width - 32.0, height: RankingFeatureSectionViewCell.height)
     }
 }
 
@@ -79,10 +77,10 @@ extension RankingFeatureSectionView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RankingFeatureCollectionViewCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RankingFeatureCollectionViewCell", for: indexPath) as? RankingFeatureSectionViewCell
+        cell?.setup()
         
-        cell.backgroundColor = .red
-        return cell
+        return cell ?? UICollectionViewCell()
     }
     
 }
@@ -111,7 +109,7 @@ private extension RankingFeatureSectionView {
         
         collectionView.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(16.0)
-            $0.height.equalTo(cellHeight * 3) // 조금 더 많은 앱을 보여주고싶다면 여기서 *4 이런식으로 수정하면 된다.
+            $0.height.equalTo(RankingFeatureSectionViewCell.height * 3) // 조금 더 많은 앱을 보여주고싶다면 여기서 *4 이런식으로 수정하면 된다.
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
         }

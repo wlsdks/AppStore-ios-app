@@ -13,6 +13,8 @@ import SnapKit
  */
 final class RankingFeatureSectionViewCell: UICollectionViewCell {
     
+    static var height: CGFloat { 70.0 }
+    
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .tertiarySystemGroupedBackground
