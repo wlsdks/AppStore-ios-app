@@ -18,6 +18,7 @@
 		EC973BC82A17D31000EB4BFF /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC973BC72A17D31000EB4BFF /* TodayCollectionViewCell.swift */; };
 		EC973BCA2A17D73C00EB4BFF /* TodayCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC973BC92A17D73C00EB4BFF /* TodayCollectionHeaderView.swift */; };
 		EC973BCC2A187CF900EB4BFF /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC973BCB2A187CF900EB4BFF /* AppViewController.swift */; };
+		EC973BCF2A18837800EB4BFF /* FeatureSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC973BCE2A18837800EB4BFF /* FeatureSectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EC973BC72A17D31000EB4BFF /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
 		EC973BC92A17D73C00EB4BFF /* TodayCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionHeaderView.swift; sourceTree = "<group>"; };
 		EC973BCB2A187CF900EB4BFF /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		EC973BCE2A18837800EB4BFF /* FeatureSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				EC973BCB2A187CF900EB4BFF /* AppViewController.swift */,
+				EC973BCE2A18837800EB4BFF /* FeatureSectionView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				EC973BCC2A187CF900EB4BFF /* AppViewController.swift in Sources */,
 				EC67FA502A165B5A006BDB6E /* SceneDelegate.swift in Sources */,
 				EC973BC82A17D31000EB4BFF /* TodayCollectionViewCell.swift in Sources */,
+				EC973BCF2A18837800EB4BFF /* FeatureSectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
