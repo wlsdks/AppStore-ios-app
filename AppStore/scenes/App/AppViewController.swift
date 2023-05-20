@@ -27,13 +27,18 @@ final class AppViewController: UIViewController {
         let rankingFeatureSectionView = RankingFeatureSectionView(frame: .zero)
         let exchangeCodeButtonView = ExchangeCodeButtonView() //내가 만든 ExchangeCodeButtonView로 변경해 준다.
         
-        exchangeCodeButtonView.backgroundColor = .red
+        // 맨 하단에 좀 거리를 띄워놓기위해서 spacingView를 선언해줌
+        let spacingView = UIView()
+        spacingView.snp.makeConstraints {
+            $0.height.equalTo(100.0)
+        }
         
         // stackView에 이 3개의 섹션 뷰를 올려준다.
         [
             featureSectionView,
             rankingFeatureSectionView,
-            exchangeCodeButtonView
+            exchangeCodeButtonView,
+            spacingView
         ].forEach { stackView.addArrangedSubview($0) }
         
         return stackView
