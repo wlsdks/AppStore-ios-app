@@ -7,8 +7,13 @@
 
 import UIKit
 
+
+/**
+   이렇게 todayViewController, appViewController를 클로저 형태로 선언해서 하단의 탭바를 하나씩 선언해준 클래스다.
+ */
 class TabBarController: UITabBarController {
     
+    // MARK: - [투데이] 라는 탭을 하단에 보이도록 선언
     private lazy var todayViewController: UIViewController = {
         // viewController를 내가 만든 TodayViewController로 설정해 준다.
         let viewController = TodayViewController()
@@ -19,8 +24,9 @@ class TabBarController: UITabBarController {
         return viewController
     }()
     
+    // MARK: - [앱] 이라는 탭을 하단에 보이도록 선언
     private lazy var appViewController: UIViewController = {
-        let viewController = UIViewController()
+        let viewController = AppViewController()
         
         let tabBarItem = UITabBarItem(title: "앱", image: UIImage(systemName: "square.stack.3d.up"), tag: 1)
         viewController.tabBarItem = tabBarItem

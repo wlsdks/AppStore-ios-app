@@ -17,6 +17,7 @@
 		EC973BC62A17CF8900EB4BFF /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC973BC52A17CF8900EB4BFF /* TodayViewController.swift */; };
 		EC973BC82A17D31000EB4BFF /* TodayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC973BC72A17D31000EB4BFF /* TodayCollectionViewCell.swift */; };
 		EC973BCA2A17D73C00EB4BFF /* TodayCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC973BC92A17D73C00EB4BFF /* TodayCollectionHeaderView.swift */; };
+		EC973BCC2A187CF900EB4BFF /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC973BCB2A187CF900EB4BFF /* AppViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		EC973BC52A17CF8900EB4BFF /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		EC973BC72A17D31000EB4BFF /* TodayCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewCell.swift; sourceTree = "<group>"; };
 		EC973BC92A17D73C00EB4BFF /* TodayCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionHeaderView.swift; sourceTree = "<group>"; };
+		EC973BCB2A187CF900EB4BFF /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +66,9 @@
 		EC67FA4C2A165B5A006BDB6E /* AppStore */ = {
 			isa = PBXGroup;
 			children = (
-				EC973BC32A17CF6A00EB4BFF /* scenes */,
 				EC67FA4D2A165B5A006BDB6E /* AppDelegate.swift */,
 				EC67FA4F2A165B5A006BDB6E /* SceneDelegate.swift */,
+				EC973BC32A17CF6A00EB4BFF /* scenes */,
 				EC67FA512A165B5A006BDB6E /* TabBarController.swift */,
 				EC67FA562A165B5B006BDB6E /* Assets.xcassets */,
 				EC67FA582A165B5B006BDB6E /* LaunchScreen.storyboard */,
@@ -78,6 +80,7 @@
 		EC973BC32A17CF6A00EB4BFF /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				EC973BCD2A187D0100EB4BFF /* App */,
 				EC973BC42A17CF7300EB4BFF /* Today */,
 			);
 			path = scenes;
@@ -91,6 +94,14 @@
 				EC973BC92A17D73C00EB4BFF /* TodayCollectionHeaderView.swift */,
 			);
 			path = Today;
+			sourceTree = "<group>";
+		};
+		EC973BCD2A187D0100EB4BFF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				EC973BCB2A187CF900EB4BFF /* AppViewController.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 				EC67FA522A165B5A006BDB6E /* TabBarController.swift in Sources */,
 				EC67FA4E2A165B5A006BDB6E /* AppDelegate.swift in Sources */,
 				EC973BCA2A17D73C00EB4BFF /* TodayCollectionHeaderView.swift in Sources */,
+				EC973BCC2A187CF900EB4BFF /* AppViewController.swift in Sources */,
 				EC67FA502A165B5A006BDB6E /* SceneDelegate.swift in Sources */,
 				EC973BC82A17D31000EB4BFF /* TodayCollectionViewCell.swift in Sources */,
 			);
