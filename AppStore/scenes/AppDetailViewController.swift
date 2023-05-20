@@ -70,6 +70,10 @@ final class AppDetailViewController: UIViewController {
         view.backgroundColor = .systemBackground
      
         setupViews()
+        
+        appIconImageView.backgroundColor = .lightGray
+        titleLabel.text = "title"
+        subTitleLabel.text = "Sub title"
     }
 }
 
