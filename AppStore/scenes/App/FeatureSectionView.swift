@@ -33,6 +33,9 @@ final class FeatureSectionView: UIView {
         return collectionView
     }()
     
+    // separatorView를 프로퍼티로 선언
+    private let separatorView = SeparatorView(frame: .zero)
+    
     // ViewController가 아닌 UIView 클래스라 ViewDidLoad가 아닌 init(생성자)으로 설정해 준다.
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -93,9 +96,12 @@ private extension FeatureSectionView {
     
     // view를 세팅한다.
     func setupViews() {
-        [collectionView].forEach { addSubview($0) }
+        [
+            collectionView,
+            separatorView // collectionView하단에 경계선 뷰인 separatorView추가
+        ].forEach { addSubview($0) }
         
-        // layout도 설정
+        // collectionView 레이아웃 설정
         collectionView.snp.makeConstraints {
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
@@ -103,5 +109,15 @@ private extension FeatureSectionView {
             $0.height.equalTo(snp.width)
             $0.bottom.equalToSuperview()
         }
+        
+        // separatorView 레이아웃 설정
+        separatorView.snp.makeConstraints {
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
+            $0.top.equalTo(collectionView.snp.bottom).offset(16.0)
+            $0.bottom.equalToSuperview()
+        }
+        
+        
     }
 }
