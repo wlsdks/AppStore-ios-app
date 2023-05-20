@@ -20,6 +20,7 @@
 		EC973BCC2A187CF900EB4BFF /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC973BCB2A187CF900EB4BFF /* AppViewController.swift */; };
 		EC973BCF2A18837800EB4BFF /* FeatureSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC973BCE2A18837800EB4BFF /* FeatureSectionView.swift */; };
 		EC973BD12A188A6400EB4BFF /* FeatureSectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC973BD02A188A6400EB4BFF /* FeatureSectionCollectionViewCell.swift */; };
+		EC973BD32A188DD900EB4BFF /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC973BD22A188DD900EB4BFF /* SeparatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		EC973BCB2A187CF900EB4BFF /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		EC973BCE2A18837800EB4BFF /* FeatureSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSectionView.swift; sourceTree = "<group>"; };
 		EC973BD02A188A6400EB4BFF /* FeatureSectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureSectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		EC973BD22A188DD900EB4BFF /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				EC973BCB2A187CF900EB4BFF /* AppViewController.swift */,
 				EC973BCE2A18837800EB4BFF /* FeatureSectionView.swift */,
 				EC973BD02A188A6400EB4BFF /* FeatureSectionCollectionViewCell.swift */,
+				EC973BD22A188DD900EB4BFF /* SeparatorView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			files = (
 				EC973BC62A17CF8900EB4BFF /* TodayViewController.swift in Sources */,
 				EC67FA522A165B5A006BDB6E /* TabBarController.swift in Sources */,
+				EC973BD32A188DD900EB4BFF /* SeparatorView.swift in Sources */,
 				EC67FA4E2A165B5A006BDB6E /* AppDelegate.swift in Sources */,
 				EC973BCA2A17D73C00EB4BFF /* TodayCollectionHeaderView.swift in Sources */,
 				EC973BCC2A187CF900EB4BFF /* AppViewController.swift in Sources */,
