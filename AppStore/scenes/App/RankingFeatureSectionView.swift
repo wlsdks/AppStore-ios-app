@@ -13,6 +13,9 @@ import UIKit
  */
 final class RankingFeatureSectionView: UIView {
     
+    // RankingFeature데이터를 담아줄 변수를 선언
+    private var rankingFeatureList: [RankingFeature] = []
+    
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 18.0, weight: .black)
@@ -57,6 +60,8 @@ final class RankingFeatureSectionView: UIView {
         super.init(frame: frame)
         
         setupViews()
+        fetchData() // 데이터 추가
+        collectionView.reloadData() // 컬렉션 뷰 리로드 실시(데이터가 보이게 해야함)
     }
     
     required init?(coder: NSCoder) {
@@ -73,12 +78,14 @@ extension RankingFeatureSectionView: UICollectionViewDelegateFlowLayout {
 extension RankingFeatureSectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        9
+        rankingFeatureList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RankingFeatureCollectionViewCell", for: indexPath) as? RankingFeatureSectionViewCell
-        cell?.setup()
+        
+        let rankingFeature = rankingFeatureList[indexPath.item]
+        cell?.setup(rankingFeature: rankingFeature)
         
         return cell ?? UICollectionViewCell()
     }
@@ -120,7 +127,19 @@ private extension RankingFeatureSectionView {
             $0.leading.equalToSuperview()
             $0.trailing.equalToSuperview()
         }
+    }
+    
+    // ranking 데이터를 세팅하는 함수
+    func fetchData() {
+        guard let url = Bundle.main.url(forResource: "RankingFeature", withExtension: "plist") else { return }
         
+        // 데이터를 주입
+        do {
+            let data = try Data(contentsOf: url)
+            let result = try PropertyListDecoder().decode([RankingFeature].self, from: data)
+            
+            self.rankingFeatureList = result
+        } catch {}
     }
     
 }

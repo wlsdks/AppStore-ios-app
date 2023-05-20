@@ -10,5 +10,5 @@ import Foundation
 struct RankingFeature: Decodable {
     let title: String
     let description: String
-    let isInpurchaseApp: Bool
+    let isInPurchaseApp: Bool
 }
