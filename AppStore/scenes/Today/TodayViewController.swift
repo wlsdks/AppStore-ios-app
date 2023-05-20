@@ -8,6 +8,9 @@
 import SnapKit
 import UIKit
 
+/**
+ 하단 탭이 투데이일때 보여질 뷰 컨트롤러이다.
+ */
 final class TodayViewController: UIViewController {
     
     private lazy var collectionView: UICollectionView = {
@@ -90,5 +93,11 @@ extension TodayViewController: UICollectionViewDelegateFlowLayout {
         header.setupViews()
         
         return header
+    }
+    
+    // 컬렉션 셀인 item이 선택되었을때 동작하는 메서드다.
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = AppDetailViewController()
+        present(vc, animated: true)
     }
 }
