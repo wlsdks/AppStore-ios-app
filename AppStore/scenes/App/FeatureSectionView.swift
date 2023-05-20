@@ -26,7 +26,7 @@ final class FeatureSectionView: UIView {
         
         // 셀 사용을 위한 register등록 -> identifier등록을 코드로 하는 방법
         collectionView.register(
-            UICollectionViewCell.self,
+            FeatureSectionCollectionViewCell.self,
             forCellWithReuseIdentifier: "FeatureSectionCollectionViewCell"
         )
         
@@ -54,10 +54,10 @@ extension FeatureSectionView: UICollectionViewDataSource {
     
     // 셀의 상세설정
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureSectionCollectionViewCell", for: indexPath)
-        cell.backgroundColor = .blue
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeatureSectionCollectionViewCell", for: indexPath) as? FeatureSectionCollectionViewCell
+        cell?.setup()
         
-        return cell
+        return cell ?? UICollectionViewCell()
     }
     
 }
@@ -75,6 +75,7 @@ extension FeatureSectionView: UICollectionViewDelegateFlowLayout {
     // inset에서도 left, right값을 설정해줬다.
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
+        // 중앙정렬을 위해서 이 코드가 필요하다.
         UIEdgeInsets(top: 0.0, left: 16.0, bottom: 0.0, right: 16.0)
         
     }
