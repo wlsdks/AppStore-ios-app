@@ -30,13 +30,11 @@ final class AppViewController: UIViewController {
         exchangeCodeButtonView.backgroundColor = .red
         
         // stackView에 이 3개의 섹션 뷰를 올려준다.
-        [ featureSectionView, rankingFeatureSectionView, exchangeCodeButtonView ].forEach {
-            // 임시로 사용한 테스트 레이아웃값은 삭제
-//            $0.snp.makeConstraints {
-//                $0.height.equalTo(500.0)
-//            }
-            stackView.addArrangedSubview($0)
-        }
+        [
+            featureSectionView,
+            rankingFeatureSectionView,
+            exchangeCodeButtonView
+        ].forEach { stackView.addArrangedSubview($0) }
         
         return stackView
     }()
