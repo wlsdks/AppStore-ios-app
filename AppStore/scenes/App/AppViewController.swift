@@ -22,6 +22,23 @@ final class AppViewController: UIViewController {
         stackView.distribution = .equalSpacing
         stackView.spacing = 0.0
         
+        // 새로운 경험, 앱의 랭킹, 코드 교환 -> 총 3개의 section이 필요하니 View를 3개 선언해 준다.
+        let featureSectionView = UIView()
+        let rankingFeatureSectionView = UIView()
+        let exchangeCodeButtonView = UIView()
+        
+        featureSectionView.backgroundColor = .red
+        rankingFeatureSectionView.backgroundColor = .blue
+        exchangeCodeButtonView.backgroundColor = .yellow
+        
+        // stackView에 이 3개의 섹션 뷰를 올려준다.
+        [ featureSectionView, rankingFeatureSectionView, exchangeCodeButtonView ].forEach {
+            $0.snp.makeConstraints {
+                $0.height.equalTo(500.0)
+            }
+            stackView.addArrangedSubview($0)
+        }
+        
         return stackView
     }()
     
@@ -29,6 +46,7 @@ final class AppViewController: UIViewController {
         super.viewDidLoad()
         
         setupNavigationController()
+        setupLayout()
     }
     
 }
