@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		EC5BBE872A1899C3002810C6 /* ExchangeCodeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5BBE862A1899C3002810C6 /* ExchangeCodeButtonView.swift */; };
 		EC5BBE892A189D0A002810C6 /* AppDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5BBE882A189D0A002810C6 /* AppDetailViewController.swift */; };
+		EC5BBE8D2A18A2F4002810C6 /* Feature.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC5BBE8A2A18A2F4002810C6 /* Feature.plist */; };
+		EC5BBE8E2A18A2F4002810C6 /* RankingFeature.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC5BBE8B2A18A2F4002810C6 /* RankingFeature.plist */; };
+		EC5BBE8F2A18A2F4002810C6 /* Today.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC5BBE8C2A18A2F4002810C6 /* Today.plist */; };
+		EC5BBE922A18A3B1002810C6 /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5BBE912A18A3B1002810C6 /* Today.swift */; };
+		EC5BBE942A18A432002810C6 /* Feature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5BBE932A18A432002810C6 /* Feature.swift */; };
+		EC5BBE962A18A49A002810C6 /* RankingFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5BBE952A18A49A002810C6 /* RankingFeature.swift */; };
 		EC67FA4E2A165B5A006BDB6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC67FA4D2A165B5A006BDB6E /* AppDelegate.swift */; };
 		EC67FA502A165B5A006BDB6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC67FA4F2A165B5A006BDB6E /* SceneDelegate.swift */; };
 		EC67FA522A165B5A006BDB6E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC67FA512A165B5A006BDB6E /* TabBarController.swift */; };
@@ -30,6 +36,12 @@
 /* Begin PBXFileReference section */
 		EC5BBE862A1899C3002810C6 /* ExchangeCodeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeCodeButtonView.swift; sourceTree = "<group>"; };
 		EC5BBE882A189D0A002810C6 /* AppDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailViewController.swift; sourceTree = "<group>"; };
+		EC5BBE8A2A18A2F4002810C6 /* Feature.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Feature.plist; sourceTree = "<group>"; };
+		EC5BBE8B2A18A2F4002810C6 /* RankingFeature.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RankingFeature.plist; sourceTree = "<group>"; };
+		EC5BBE8C2A18A2F4002810C6 /* Today.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Today.plist; sourceTree = "<group>"; };
+		EC5BBE912A18A3B1002810C6 /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
+		EC5BBE932A18A432002810C6 /* Feature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feature.swift; sourceTree = "<group>"; };
+		EC5BBE952A18A49A002810C6 /* RankingFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingFeature.swift; sourceTree = "<group>"; };
 		EC67FA4A2A165B5A006BDB6E /* AppStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC67FA4D2A165B5A006BDB6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC67FA4F2A165B5A006BDB6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +73,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC5BBE902A18A312002810C6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EC5BBE8A2A18A2F4002810C6 /* Feature.plist */,
+				EC5BBE8B2A18A2F4002810C6 /* RankingFeature.plist */,
+				EC5BBE8C2A18A2F4002810C6 /* Today.plist */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		EC67FA412A165B5A006BDB6E = {
 			isa = PBXGroup;
 			children = (
@@ -82,8 +104,13 @@
 			children = (
 				EC67FA4D2A165B5A006BDB6E /* AppDelegate.swift */,
 				EC67FA4F2A165B5A006BDB6E /* SceneDelegate.swift */,
+				EC5BBE932A18A432002810C6 /* Feature.swift */,
+				EC5BBE952A18A49A002810C6 /* RankingFeature.swift */,
+				EC5BBE912A18A3B1002810C6 /* Today.swift */,
+				EC5BBE902A18A312002810C6 /* Data */,
 				EC973BC32A17CF6A00EB4BFF /* scenes */,
 				EC67FA512A165B5A006BDB6E /* TabBarController.swift */,
+				EC5BBE882A189D0A002810C6 /* AppDetailViewController.swift */,
 				EC67FA562A165B5B006BDB6E /* Assets.xcassets */,
 				EC67FA582A165B5B006BDB6E /* LaunchScreen.storyboard */,
 				EC67FA5B2A165B5B006BDB6E /* Info.plist */,
@@ -96,7 +123,6 @@
 			children = (
 				EC973BCD2A187D0100EB4BFF /* App */,
 				EC973BC42A17CF7300EB4BFF /* Today */,
-				EC5BBE882A189D0A002810C6 /* AppDetailViewController.swift */,
 			);
 			path = scenes;
 			sourceTree = "<group>";
@@ -191,6 +217,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC5BBE8E2A18A2F4002810C6 /* RankingFeature.plist in Resources */,
+				EC5BBE8F2A18A2F4002810C6 /* Today.plist in Resources */,
+				EC5BBE8D2A18A2F4002810C6 /* Feature.plist in Resources */,
 				EC67FA5A2A165B5B006BDB6E /* LaunchScreen.storyboard in Resources */,
 				EC67FA572A165B5B006BDB6E /* Assets.xcassets in Resources */,
 			);
@@ -204,8 +233,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC973BC62A17CF8900EB4BFF /* TodayViewController.swift in Sources */,
+				EC5BBE922A18A3B1002810C6 /* Today.swift in Sources */,
 				EC67FA522A165B5A006BDB6E /* TabBarController.swift in Sources */,
 				EC5BBE872A1899C3002810C6 /* ExchangeCodeButtonView.swift in Sources */,
+				EC5BBE962A18A49A002810C6 /* RankingFeature.swift in Sources */,
+				EC5BBE942A18A432002810C6 /* Feature.swift in Sources */,
 				EC973BD32A188DD900EB4BFF /* SeparatorView.swift in Sources */,
 				EC67FA4E2A165B5A006BDB6E /* AppDelegate.swift in Sources */,
 				EC973BD72A18948200EB4BFF /* RankingFeatureSectionViewCell.swift in Sources */,
